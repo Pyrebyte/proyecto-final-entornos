@@ -1,50 +1,59 @@
+package inmobiliaria;
 
-import java.util.*;
+public class Piso extends Inmueble {
 
-public class Piso {
+	int numHab;
+	int numBan;
+	boolean calefaccion;
+	int antiguedad;
 
-    public int numHab;
-    public int numBan;
-    public boolean calefaccion;
-    public int antiguedad;
+	public Piso(String codInm, String direccionI, int superficie,int precio, String propietario, int numHab, int numBan, boolean calefaccion,int antiguedad) {
+		super(codInm, direccionI, superficie, precio, propietario);
+		this.numHab = numHab;
+		this.numBan = numBan;
+		this.calefaccion = calefaccion;
+		this.antiguedad = antiguedad;
+	}
+	
+	public int getNumHab() {
+		return numHab;
+	}
 
-    public Piso() {
-    }
-    
-    public void setNumHab() {
-        // TODO implement here
-    }
+	public void setNumHab(int numHab) {
+		this.numHab = numHab;
+	}
 
-    public void getNumHab() {
-        // TODO implement here
-    }
+	public int getNumBan() {
+		return numBan;
+	}
 
-    public void setNumBan() {
-        // TODO implement here
-    }
+	public void setNumBan(int numBan) {
+		this.numBan = numBan;
+	}
 
-    public void getNumBan() {
-        // TODO implement here
-    }
+	public boolean getCalefaccion() {
+		return calefaccion;
+	}
 
-    public void setCalefaccion() {
-        // TODO implement here
-    }
+	public void setCalefaccion(boolean calefaccion) {
+		this.calefaccion = calefaccion;
+	}
 
-    public void getCalefaccion() {
-        // TODO implement here
-    }
+	public int getAntiguedad() {
+		return antiguedad;
+	}
 
-    public void setAntiguedad() {
-        // TODO implement here
-    }
-    
-    public void getAntiguedad() {
-        // TODO implement here
-    }
-
-    public void toString() {
-        // TODO implement here
-    }
-
+	public void setAntiguedad(int antiguedad) {
+		this.antiguedad = antiguedad;
+	}
+	
+	public String toString(){
+		return super.toString()
+				+ "\nNumero de habitaciones: " + numHab
+				+ "\nNumero de baños: " + numBan
+				+ "\nTiene calefaccion: " + (calefaccion ? "Si" : "No")
+				+ "nAntigüedad: " + antiguedad + " años";
+	}
 }
+
+

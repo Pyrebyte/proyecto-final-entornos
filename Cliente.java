@@ -1,23 +1,26 @@
+package inmobiliaria;
 
 import java.util.*;
 
 public class Cliente extends Persona {
 
-    public string cuentaBanc;
-    
-    public Cliente() {
-    }
+	String cuentaBanc;
 
-    public void getCuentaBanc() {
-        // TODO implement here
-    }
+	public Cliente(String dni, String nombre, String apellidos, String fechaNac,String telefono, String direccionP, String cuentaBanc) {
+		super(dni, nombre, apellidos, fechaNac, telefono, direccionP);
+		this.cuentaBanc = cuentaBanc;
+	}
+	
+	public String getCuentaBanc() {
+		return cuentaBanc;
+	}
 
-    public void setCuentaBanc() {
-        // TODO implement here
-    }
-
-    public void toString() {
-        // TODO implement here
-    }
-
+	public void setCuentaBanc(String cuentaBanc) {
+		this.cuentaBanc = cuentaBanc;
+	}
+	
+	public String toString(){
+		return super.toString()
+				+ "nCuenta bancaria nº " + cuentaBanc;
+	}
 }

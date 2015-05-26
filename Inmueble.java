@@ -1,71 +1,88 @@
+package inmobiliaria;
 
-import java.util.*;
+public class Inmueble {
 
-public class Inmueble extends Local {
+	static final int iva1 = 18;
+	static final int iva2 = 21;
+	String codInm;
+	String direccionI;
+	int superficie;
+	String propietario;
+	int precio;
+	boolean adquirido = false;
 
-    public string codInm;
-    public string direccionI;
-    public int superficie;
-	public int precio;
-    public string propietario;
-    
-    public Inmueble() {
-    }
-    
-    public void setCodInm() {
-        // TODO implement here
-    }
-
-    public void getCodInm() {
-        // TODO implement here
-    }
-
-    public void setDireccionI() {
-        // TODO implement here
-    }
-
-    public void getDireccionI() {
-        // TODO implement here
-    }
-
-    public void setSuperficie() {
-        // TODO implement here
-    }
-
-    public void getSuperficie() {
-        // TODO implement here
-    }
+	public Inmueble(String codInm, String direccionI, int superficie,int precio, String propietario) {
+		this.codInm = codInm;
+		this.direccionI = direccionI;
+		this.superficie = superficie;
+		this.precio = precio;
+		this.propietario = propietario;
+	}
 	
-	public void setPrecio() {
-        // TODO implement here
-    }
+	public String getCodInm() {
+		return codInm;
+	}
 
-    public void getPrecio() {
-        // TODO implement here
-    }
+	public void setCodInm(String codInm) {
+		this.codInm = codInm;
+	}
 
-    public void setPropietario() {
-        // TODO implement here
-    }
+	public String getdireccionI() {
+		return direccionI;
+	}
 
-    public void getPropietario() {
-        // TODO implement here
-    }
+	public void setDireccion(String direccionI) {
+		this.direccionI = direccionI;
+	}
 
-    public void setAdquirido() {
-        // TODO implement here
-    }
+	public int getSuperficie() {
+		return superficie;
+	}
+
+	public void setSuperficie(int superficie) {
+		this.superficie = superficie;
+	}
 	
-	public void getAdquirido() {
-        // TODO implement here
-    }
+	public int getPrecio() {
+		return precio;
+	}
 
-    public void precioInm() {
-        // TODO implement here
-    }
+	public void setPrecio(int precio) {
+		this.precio = precio;
+	}
 
-    public void toString() {
-        // TODO implement here
-    }
+	public String getPropietario() {
+		return propietario;
+	}
 
+	public void setPropietario(String propietario) {
+		this.propietario = propietario;
+	}
+
+	public boolean getAdquirido() {
+		return adquirido;
+	}
+
+	public void setAdquirido(boolean adquirido) {
+		this.adquirido = adquirido;
+	}
+	
+	public int precioInm(){
+		if ((superficie < 100) && (superficie != 0))
+			precio = precio * iva1;
+		else
+			precio = precio * iva2;
+		return precio;	
+	}
+	
+	public String toString(){
+		return "El inmueble con codigo " + codInm + " situado en " + direccionI + " tiene las siguientes caracteristicas: "
+				+ "\nSuperficie: " + superficie + " m2"
+				+ "\nPropietario: " + propietario
+				+ "\nPrecio: " + precio
+				+ "\nComprado o alquilado: " + (adquirido ? "Si" : "No")
+				+ "\n";	
+	}
 }
+
+

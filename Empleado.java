@@ -1,23 +1,27 @@
+package inmobiliaria;
 
 import java.util.*;
 
 public class Empleado extends Persona {
 
-    public string codEmp;
-    
-    public Empleado() {
-    }
+	String codEmp;
 
-    public void getCodEmp() {
-        // TODO implement here
-    }
+	public Empleado(String dni, String nombre, String apellidos, String fechaNac,String telefono, String direccionP, String codEmp) {
+		super(dni, nombre, apellidos, fechaNac, telefono, direccionP);
+		this.codEmp = codEmp;
+	}
+	
+	public String getCodEmp() {
+		return codEmp;
+	}
 
-    public void setCodEmp() {
-        // TODO implement here
-    }
-
-    public void toString() {
-        // TODO implement here
-    }
-
+	public void setCodEmp(String codEmp) {
+		this.codEmp = codEmp;
+	}
+	
+	public String toString(){
+		return super.toString()
+				+ "\nCodigo de empleado: " + codEmp				 
+				+ "\n";	
+	}
 }

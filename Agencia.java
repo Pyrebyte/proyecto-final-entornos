@@ -1,62 +1,67 @@
-
-import java.util.*;
-
+package inmobiliaria;
 
 public class Agencia {
-
-    public string nombre;
-    public string zonaAct;
-    public string fax; 
-    public string telefono;
-    public string direccion;
+	
+	String nombre;
+	String zonaAct;
+	String fax;
+	String telefono;
+	String direccion;
+	
+    public Agencia(String nombre,String zonaAct,String fax, String telefono,String direccion) {
+    	this.nombre = nombre;
+    	this.zonaAct = zonaAct;
+    	this.fax = fax;
+    	this.telefono = telefono;
+    	this.direccion = direccion;
+    }
     
-    public Agencia() {
-    }
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
 
-    public void setNombre() {
-        // TODO implement here
-    }
+	public String getNombre() {
+		return this.nombre;
+	}
 
-    public void getNombre() {
-        // TODO implement here
-    }
+	public void setZonaAct(String zonaAct) {
+		this.nombre = zonaAct;
+	}
 
-    public void setZonaAct() {
-        // TODO implement here
-    }
+	public String getZonaAct() {
+		return this.zonaAct;
+	}
 
-    public void getZonaAct() {
-        // TODO implement here
-    }
+	public void setFax(String fax) {
+		this.fax = fax;
+	}
 
-    public void setFax() {
-        // TODO implement here
-    }
+	public String getFax() {
+		return this.fax;
+	}
 
-    public void getFax() {
-        // TODO implement here
-    }
+	public void setTelefono(String telefono) {
+		this.telefono = telefono;
+	}
 
-    public void setTelefono() {
-        // TODO implement here
-    }
+	public String getTelefono() {
+		return this.telefono;
+	}
 
-    public void getTelefono() {
-        // TODO implement here
-    }
+	public void setDireccion(String direccion) {
+		this.direccion = direccion;
+	}
 
-    public void setDireccion() {
-        // TODO implement here
-    }
-
-    public void getDireccion() {
-        // TODO implement here
-    }
-
-    public void toString() {
-        // TODO implement here
-    }
-
+	public String getDireccion() {
+		return this.direccion;
+	}
+	
+	public String toString(){
+		return "La agencia " + nombre + " cuya zona de actuacion es " + zonaAct + " tiene los siguientes datos: "
+				+ "\nFax: " + fax 
+				+ "\nTelefono: " + telefono
+				+ "\nDireccion: " + direccion;
+	}
 }
 
 

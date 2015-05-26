@@ -1,68 +1,82 @@
+package inmobiliaria;
 
 import java.util.*;
 
 public class Persona {
 
-    public string dni;
-    public string nombre;
-    public string apellidos;
-    public date fechaNac;
-    public string telefono;
-    public string direccionP;
-    
-    public Persona() {
-    }
+	String dni;
+	String nombre;
+	String apellidos;
+	String fechaNac;
+	String telefono;
+	String direccionP;
 
-    public void getDni() {
-        // TODO implement here
-    }
-
-    public void setDni() {
-        // TODO implement here
-    }
-
-    public void getNombre() {
-        // TODO implement here
-    }
-
-    public void setNombre() {
-        // TODO implement here
-    }
-
-    public void getApellidos() {
-        // TODO implement here
-    }
-
-    public void setApellidos() {
-        // TODO implement here
-    }
-
-    public void getFechaNac() {
-        // TODO implement here
-    }
-
-    public void setFechaNac() {
-        // TODO implement here
-    }
-
-    public void getTelefono() {
-        // TODO implement here
-    }
-
-    public void setTelefono() {
-        // TODO implement here
-    }
-
-    public void getDireccionP() {
-        // TODO implement here
-    }
-
-    public void setDireccionP() {
-        // TODO implement here
-    }
-
-    public void toString() {
-        // TODO implement here
-    }
+	public Persona(String dni, String nombre, String apellidos, String fechaNac,String telefono, String direccionP) {
+		this.dni = dni;
+		this.nombre = nombre;
+		this.apellidos = apellidos;
+		this.fechaNac = fechaNac;
+		this.telefono = telefono;
+		this.direccionP = direccionP;
+	}
 	
+	public void setDni(String dni) {
+		this.dni = dni;
+	}
+
+	public String getDni() {
+		return this.dni;
+	}
+	
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public String getNombre() {
+		return this.nombre;
+	}
+	
+	public void setApellidos(String apellidos) {
+		this.apellidos = apellidos;
+	}
+
+	public String getApelidos() {
+		return this.apellidos;
+	}
+	
+	public void setFechaNac(String fechaNac) {
+		this.fechaNac = fechaNac;
+	}
+
+	public String getFechaNac() {
+		return this.fechaNac;
+	}
+	
+	public void setTelefono(String telefono) {
+		this.telefono = telefono;
+	}
+
+	public String getTelefono() {
+		return this.telefono;
+	}
+	
+	public void setdireccionP(String direccionP) {
+		this.direccionP = direccionP;
+	}
+
+	public String getdireccionP() {
+		return this.direccionP;
+	}
+	
+	public String toString(){
+		return "Para la persona con DNI " + dni + " sus datos son los siguentes: "
+				+ "\nNombre: " + nombre 
+				+ "\nFecha de nacimiento: " + fechaNac
+				+ "\nTelefono: " + telefono
+				+ "\nDirecion: " + direccionP;
+	}
 }
+
+
+
+
