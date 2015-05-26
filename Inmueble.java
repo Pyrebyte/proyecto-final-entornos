@@ -6,6 +6,7 @@ public class Inmueble extends Local {
     public string codInm;
     public string direccionI;
     public int superficie;
+	public int precio;
     public string propietario;
     
     public Inmueble() {
@@ -34,6 +35,14 @@ public class Inmueble extends Local {
     public void getSuperficie() {
         // TODO implement here
     }
+	
+	public void setPrecio() {
+        // TODO implement here
+    }
+
+    public void getPrecio() {
+        // TODO implement here
+    }
 
     public void setPropietario() {
         // TODO implement here
@@ -46,8 +55,12 @@ public class Inmueble extends Local {
     public void setAdquirido() {
         // TODO implement here
     }
+	
+	public void getAdquirido() {
+        // TODO implement here
+    }
 
-    public void getAdquirido() {
+    public void precioInm() {
         // TODO implement here
     }
 
