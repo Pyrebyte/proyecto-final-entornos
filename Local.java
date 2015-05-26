@@ -1,23 +1,24 @@
+package inmobiliaria;
 
-import java.util.*;
+public class Local extends Inmueble {
 
-public class Local {
+	boolean licencia;
+	
+	public Local(String codInm, String direccionI, int superficie,int precio, String propietario, boolean licencia) {
+		super(codInm, direccionI, superficie, precio, propietario);
+		this.licencia = licencia;
+	}
+	
+	public boolean getLicencia() {
+		return licencia;
+	}
 
-    public boolean licencia;
-    
-    public Local() {
-    }
-    
-    public void setLicencia() {
-        // TODO implement here
-    }
-
-    public void getLicencia() {
-        // TODO implement here
-    }
-
-    public void toString() {
-        // TODO implement here
-    }
-
+	public void setLicencia(boolean licencia) {
+		this.licencia = licencia;
+	}
+	
+	public String toString(){
+		return super.toString()
+				+ "\nLicencia: " + (licencia ? "Tiene" : "No tiene") + "\n";	
+	}
 }
